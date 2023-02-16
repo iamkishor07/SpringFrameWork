@@ -6,8 +6,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
-//@Component
-@ComponentScan
 public interface BioData {
 
     String getName();

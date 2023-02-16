@@ -1,7 +1,19 @@
-package com.example.demo.Repositry;
+package com.example.demo.Entity;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Topic")
 public class Topic {
+    @Id
+    @GeneratedValue
     private int id;
+    private String courseName;
+    private  String CourseDescription;
 
     public int getId() {
         return id;
@@ -27,6 +39,11 @@ public class Topic {
         CourseDescription = courseDescription;
     }
 
+    public Topic(String courseName, String courseDescription) {
+        this.courseName = courseName;
+        CourseDescription = courseDescription;
+    }
+
     public Topic(int id, String courseName, String courseDescription) {
         this.id = id;
         this.courseName = courseName;
@@ -36,8 +53,6 @@ public class Topic {
     public Topic() {
     }
 
-    private String courseName;
-    private  String CourseDescription;
 
 
 }

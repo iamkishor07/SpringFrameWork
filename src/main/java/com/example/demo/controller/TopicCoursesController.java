@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.Repositry.Topic;
+import com.example.demo.Entity.Topic;
 import com.example.demo.service.TopicServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
