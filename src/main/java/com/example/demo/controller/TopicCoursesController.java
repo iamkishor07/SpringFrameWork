@@ -1,11 +1,12 @@
 package com.example.demo.controller;
 
 import com.example.demo.Entity.Topic;
-import com.example.demo.service.TopicServices;
+import com.example.demo.serviceimpl.TopicServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class TopicCoursesController {
@@ -21,7 +22,7 @@ public class TopicCoursesController {
         //This happens internally that is provided by Spring MVC framework
     }
 
-    @RequestMapping("/Topics/{id}") public Topic getTopic(@PathVariable int id){
+    @RequestMapping("/Topics/{id}") public Optional<Topic> getTopic(@PathVariable int id){
         return topicservice.getTopic(id);
         //This is the get request that mapped to /Topics/{id}
         //This method returns the Topic object which is matched to the given id
