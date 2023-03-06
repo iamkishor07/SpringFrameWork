@@ -13,15 +13,15 @@ import org.springframework.context.annotation.ComponentScan;
 public class DemoApplication {
 
 	public static void main(String[] args) throws JsonProcessingException {
-		SpringApplication.run(DemoApplication.class, args);
-//		Topic t=new Topic(1,"NLP","Naturallearning program");
-//		ObjectMapper obj=new ObjectMapper();
-//		String u=obj.writeValueAsString(t);
-//		System.out.println(u);
-//		String json="{\"id\":1,\"courseName\":\"NLP\",\"courseDescription\":\"Naturallearning program\"}";
-//		Topic topic = new Topic();
-//		Topic data=obj.readValue(json, Topic.class);
-//		System.out.println(data.getId()+" "+data.getCourseName()+" "+data.getCourseDescription());
+//		SpringApplication.run(DemoApplication.class, args);
+		Topic t=new Topic(1,"NLP","Naturallearning program");
+		ObjectMapper obj=new ObjectMapper();
+		String u=obj.writeValueAsString(t);
+		System.out.println(u);
+		String json="{\"id\":1,\"courseName\":\"NLP\",\"courseDescription\":\"Naturallearning program\"}";
+		Topic topic = new Topic();
+		Topic data=obj.readValue(json, Topic.class);
+		System.out.println(data.getId()+" "+data.getCourseName()+" "+data.getCourseDescription());
 	}
 
 }
